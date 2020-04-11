@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Amit Rai</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/main.css' %}">
+    
+    <!-- Alternative to Bootstrap 3 Glyphicons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!--font-family: 'Metrophobic', serif;-->
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,400italic,600italic' rel='stylesheet' type='text/css'> 
+    <!--font-family: 'Open Sans', sans-serif;-->
+    <!-- font icon css style-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    {# MEDIUM STYLE EDITOR#}
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+   
+  </head>
+
+  <body>
+
+ <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+    
+        <div class="navbar-nav align-items-center">
+          <a class="navbar-brand bigbrand" style="font-family: Merriweather;" href="{% url 'post_list' %}">AR</a>
+         </div>
+        <ul class="nav align-items-center ml-auto">
+        <li class="nav-item">
+          <a class="nav-link"  href="{% url 'home' %}" active>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'post_list' %}">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contributions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.flickr.com/photos/187839942@N07/albums">Photography</a>
+        </li>
+      </ul>
+          
+         
+          {% if user.is_authenticated %}
+            <div class="nav-item dropdown">
+            
+            <button class="btn btn-outline-success dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="font-family: Merriweather;"><span class="fa fa-user" aria-hidden="true">&nbsp;</span>{{ user.username }}</button>
+
+            <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
+            <a class="dropdown-item" href="{% url 'post_new' %}">New Post</a>
+            <a class="dropdown-item" href="{% url 'post_draft_list' %}">Drafts</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'logout' %}">Log out </a>
+             </div>
+          </div>
+          
+           {% endif %}
+
+
+        </div>
+      
+    </nav> 
+
+
+
+    {# The actual blog posts#}
+
+
+
+     {% block content %}
+     {% endblock %}
+
+
+
+
+    {# SCRIPTS#}
+    <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+</div>
+  </body>
+  <footer class="py-3 bg-dark text-white-50" style="margin-top: 10px">
+    <div class="container text-center">
+      <small>Copyright &copy;www.amitraikkr.com</small>
+    </div>
+  </footer>
+</html>

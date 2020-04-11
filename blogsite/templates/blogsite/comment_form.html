@@ -1,0 +1,16 @@
+{% extends 'blogsite/base.html' %}
+
+{% block content %}
+<div class="container">
+<div style="margin-top:70px;">
+<h5>New comment</h5>
+    <form method="POST" class="post-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="save btn btn-primary">Post Comment</button>
+    </form>
+
+    <script>var editor = new MediumEditor('.editable');</script>
+</div>
+</div>
+{% endblock %}

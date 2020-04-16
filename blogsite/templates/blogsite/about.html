@@ -1,10 +1,12 @@
 {% extends 'blogsite/base.html' %}
 {% load static %}
 {% block content %}
-<div class="container" style="margin-top:80px">
 
-<div class="row">
-    <div class="col-md-4" align="center">
+<div class="container clsscntr" style="margin-top:80px;background-color: #DFE0E1; box-shadow: 10px 10px 5px grey;">
+
+<div class="row" >
+	<div class="col-md-2"></div>
+    <div class="col-md-2" align="center">
 
     	<div style="margin-top:80px;">
     	<img class="circular--square" src="{% static 'images/mypic1.jpg' %}"/>
@@ -35,11 +37,11 @@
 
     <div class="col-md-8">
 
-    <div style="margin-top:80px;">
+    <div style="margin-top:80px;margin-left: 20px;">
     	
        <h1 align="center">Something about me</h1>
-            <p>Amit (Hebrew name: עמית‎  means "friend"), is a IT professional with an extensive track record of designing, developing and implementing the web solutions to solve complex business problems. He is passionate about programming, solving problem and exploring new things. Although his career path has many turns and twists, from teaching old programming languages, to work on enterprise level applications in corporate environment and, to design, develop and support solutions in small community, but he never stopped taking new oppertunities and challenges in his life.He is accustomed to the rigors of fast-paced environments requiring sharp attention to detail, multi-tasking, and excellent communication skills. He possess a unique talent for translating highly complex technical information into terms and concepts that end users can readily grasp. He loves reading, travelling, photograpy and spending time with his lovely wife and son.</p>
-            <p>To know more about him, contact at amitraikkr760@gmail.co or +1 (437)-221-9118</p>
+            <p style="text-align: justify;">I, Amit (Hebrew name: עמית‎ means "friend"), is a result-focused IT professional with an extensive track record of designing, developing, implementing and supporting web solutions. I am passionate about programming, troubleshooting problems and create a solution for real life and complex business problems. Although my career path has many turns, from teaching, to work on enterprise level applications in corporate environment and, to design, develop and support solutions in small communities, but I never stopped taking new opportunities and challenges in my life. I enjoy working in fast-paced environments requiring sharp attention to detail, multi-tasking, and excellent communication skills. I possess unique talent to understand the customer’s needs, translate them in concepts and turn down into solutions that end users can readily grasp. I love reading, travelling, photography and spending time with his lovely wife and son.</p>
+            <p style="text-align: justify;">To know more about him, contact at amitraikkr760@gmail.co or +1 (437)-221-9118</p>
 
     </div>	
     </div>
@@ -128,26 +130,23 @@
 
 				<!-- Wrapper for carousel items -->
 				<div class="carousel-inner">
-					
 					<div class="item carousel-item active">
-						
 						<div class="row">
-							
 							<div class="col-md-6">
-								<div class="media">
-
-									<div class="media-body">
+								<!--<div class="media">-->
+									
+									<!--<div class="media-body">-->
 										<div class="testimonial">
 											<p>" Amit is passionate, hardworking, problem solver and always ready to go over and above to get the work done. Amit has been a valuable member of our implementation and pre-sales teams. His contributions were essential to our success in UK and Europe’s biggest retail chains. He support both internally and among customer operating groups has been exceptional and extraordinary. His analytical skills to understand and articulate a problem and then find a solution is commendable"</p>
-											<p class="overview"><b>Jagadesh Thondapu</b>, Director of Technology at Reflexis @Linkedin</p>
+											<p class="overview"><b>Jagadesh Thondapu</b>, Director of Tech. at Reflexis @Linkedin</p>
 										</div>
-									</div>
-								</div>
+									<!--</div>-->
+								<!--</div>-->
+							
 							</div>
 							
 							<div class="col-md-6">
 								<div class="media">
-
 									<div class="media-body">
 										<div class="testimonial">
 											<p>" Amit is a hard-working and conscientious individual who provided technical knowledge to the UK team in a time of great change and high volume of work.  Amit made himself available to solve technical issues at any time of the day and night across multiple time zones in order to provide the very best standard of customer service to both his internal customers and the end retail customer. "</p>
@@ -156,17 +155,13 @@
 									</div>
 								</div>
 							</div>
-
-
 						</div>			
 					</div>
 
 					<div class="item carousel-item">
 						<div class="row">
-							
 							<div class="col-md-6">
 								<div class="media">
-	
 									<div class="media-body">
 										<div class="testimonial">
 											<p>" I hade a huge Projekt with Amit in Switzerland, we had to rollout a software in 3 different languages.Amit is very reliable and if it was necessary, he worked nearly 24h. The communication with him was very good, although non of us is an English native speaker.
@@ -199,7 +194,5 @@
 		</div>
 	</div>
 </div>
-                    		                            
-
 </div>
 {% endblock %}

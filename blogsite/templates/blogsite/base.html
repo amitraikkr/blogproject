@@ -36,13 +36,18 @@
   </head>
 
   <body>
-
- <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+ <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
     
-        <div class="navbar-nav align-items-center">
-          <a class="navbar-brand bigbrand" style="font-family: Merriweather;" href="{% url 'post_list' %}">AR</a>
-         </div>
-        <ul class="nav align-items-center ml-auto">
+        
+  <a class="navbar-brand bigbrand" style="font-family: Merriweather;" href="{% url 'post_list' %}">AR</a>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <ul class="navbar-nav align-items-center ml-auto">
         <li class="nav-item">
           <a class="nav-link"  href="{% url 'home' %}" active>Home</a>
         </li>
@@ -56,7 +61,7 @@
           <a class="nav-link" href="https://www.flickr.com/photos/187839942@N07/albums">Photography</a>
         </li>
       </ul>
-          
+      </div>
          
           {% if user.is_authenticated %}
             <div class="nav-item dropdown">
@@ -75,10 +80,9 @@
            {% endif %}
 
 
-        </div>
+       
       
     </nav> 
-
 
 
     {# The actual blog posts#}

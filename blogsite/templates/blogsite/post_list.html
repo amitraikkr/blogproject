@@ -9,17 +9,11 @@
 {% for post in post_list %}
         <div class="col-md-3">
         <div  style="margin-top:20px;">
-
             <img class="img-fluid rounded" src="{{post.post_pic.url}}" alt="Card image cap">
-            
-	    
-            <!--<p>{{ post.text|truncatewords:25|safe|linebreaksbr }} </p>-->
-            <div style="font-size: .8em;">
-                <p>Published on: {{ post.published_date|date:"D M Y"}}</p>
+            <div>
+                <p style="font-size: .8em;">Published on: {{ post.published_date|date:"D M Y"}}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}"><h5 style="text-align: left;">{{ post.title }}</h5></a>
             </div>
-            <h5>{{ post.title }}</h5>
-            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary">Read</a>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
         </div>
         </div>
     {% if forloop.last %}
@@ -27,11 +21,8 @@
     {% elif forloop.counter|divisibleby:"4" %}
        <div class="row">
     {% endif %}
-
 {% endfor %}
 </div>
- 
-
 {% endblock %}
 
 

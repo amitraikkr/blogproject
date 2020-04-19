@@ -2,13 +2,11 @@
 
 
 {% block content %}
-  <div class="jumbotron" style="margin-top:100px;margin-left:750px">
+  <div style="margin-top:100px;margin-left:750px">
 
-    <h3>Login: </h3>
+    <h3>Administrator Login: </h3>
     <hr class="my-4">
     {% if form.errors %}
-       
-        
     {% endif %}
 
     <form method="POST" action="{% url 'login' %}">

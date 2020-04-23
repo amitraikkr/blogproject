@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor', 
+    'ckeditor_uploader',
     'blogsite',
 ]
 
@@ -122,9 +124,31 @@ LOGOUT_REDIRECT_URL = '/'
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = 'E:/PythonProjects/blogproject/blogsite/static'
+
+CKEDITOR_UPLOAD_PATH = "E:/PythonProjects/blogproject/blogsite/media/"
+
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/'
 
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_CONFIGS = {
+   'default': {
+       'toolbar_Full': [
+            ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Flash', 'Table', 'HorizontalRule'],
+            ['TextColor', 'BGColor'],
+            ['Smiley', 'SpecialChar'], ['Source'],
+            ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['NumberedList','BulletedList'],
+            ['Indent','Outdent'],
+            ['Maximize'],
+        ],
+        'extraPlugins': 'justify,liststyle,indent',
+   },
+}
 

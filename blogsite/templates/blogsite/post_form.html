@@ -8,13 +8,12 @@
 
     <form method="POST" class="post-form" enctype="multipart/form-data">
     {% csrf_token %}
-
+     {{ form.media }}
     {{form.as_p}}
     
     <button type="Submit" class="save btn btn-primary">Save</button>
     </form>
 
- <script>var editor = new MediumEditor('.editable');</script>
     
 
 </div>

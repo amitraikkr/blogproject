@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = 'E:/PythonProjects/blogproject/blogsite/static'
 
-CKEDITOR_UPLOAD_PATH = "E:/PythonProjects/blogproject/blogsite/media/"
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'

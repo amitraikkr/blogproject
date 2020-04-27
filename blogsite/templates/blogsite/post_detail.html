@@ -6,9 +6,11 @@
 
 
         <h1 class='posttitle loader'>{{ post.title }}</h1>
-        <div style="margin-left: 250px">
-        <img class="img-fluid rounded" src="{{post.post_pic.url}}" style="height: 300px;width: 500px">
+       
+        <div align="center">
+        <img class="responsive" src="{{post.post_pic.url}}" style="height: 300px;width: 500px">
         </div>
+       
         {% if post.published_date %}
             <div class="date postdate">
                 {{ post.published_date }}
@@ -18,7 +20,7 @@
             <a class="btn btn-outline-dark" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
         {% endif %}
 
-      <p class='postcontent' >{{ post.text|safe|linebreaksbr }}</p>
+      <p class='postcontent' >{{ post.text|safe }}</p>
 
 
       {% if user.is_authenticated %}

@@ -5,7 +5,7 @@
 
 
 a {
-	color:black;
+	color:blue;
 	font-size: 1.1em;
 }
 
@@ -22,11 +22,8 @@ ul li a:hover {
 
 
 p{
-	font-family:  sans-serif;
-	font-size:18px;
-	line-height:27px;
-	font-weight:400;
-	padding-bottom:30px;
+	font-family: 'Lato', sans-serif;
+	text-align: left;
 	margin:0px;
 }
 
@@ -37,7 +34,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1{
 	font-family: 'Montserrat', sans-serif;
-	font-size:1.9em;
+	font-size:2.3em;
 	line-height:76px;
 	font-weight:400;
 	margin:0px;
@@ -54,13 +51,13 @@ h2{
 	margin:0px;
 }
 h3{
-	font-family: 'Crimson Text', serif;
-	font-style:italic;
-	font-size:27px;
-	line-height:30px;
-	padding-bottom:10px;
+	font-family: sans-serif;
+	font-size:21px;
+	line-height:25px;
+	padding-bottom:2px;
 	font-weight:300;
 	margin:0px;
+	text-align: center;
 }
 h4{
 	font-family: 'Montserrat', sans-serif;
@@ -72,7 +69,7 @@ h4{
 }
 h5{
 	font-family: 'Montserrat', sans-serif;
-	font-size:17px;
+	font-size:19px;
 	color:#372d38;
 	line-height:24px;
 	padding-bottom:10px;
@@ -80,68 +77,67 @@ h5{
 	margin:0px;
 }
 
-.carousel {
-	margin: 10px auto;
-	padding: 0 10px;
-}
 .carousel .item {
 	color: #999;
 	font-size: 13px;
-	overflow: hidden;
+	overflow: visible;
     min-height: 120px;
-    min-width: 400px;
+    /*min-width: 400px;*/
 	font-size: 13px;
 }
 
-.carousel .testimonial {
-	padding: 0 10px 0 10px ;
-	position: relative;
-	font-style: italic;
+.testimonial {
+	font-family: 'Lato', sans-serif;
+	color: #999;
+	font-size:1em;
+	line-height: 25px;
+	padding-bottom: 15px; 
+
+	
 }
 
-.carousel .overview b {
-	text-transform: uppercase;
-	color: #1c47e3;
-	font-size: 12px;
-}
-.carousel .carousel-indicators {
-	bottom: -40px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 18px;
-    height: 18px;
-	border-radius: 50%;
-	margin: 1px 3px;
-}
-.carousel-indicators li {	
-    background: #e2e2e2;
-    border: 1px solid #fff;
-}
-.carousel-indicators li.active {
-	color: #fff;
-    background: #1c47e3;    
-    border: 1px double;    
+.overview{
+	
+	color: #606265;
+	font-size:.8em;
+	line-height: 20px;
+
 }
 
+blockquote{
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
 
 /*----------------------------------------------------
 	4. About me Style
 ------------------------------------------------------*/
 .aboutus{
-	background:#ffffff;
-	text-align:left;
+	
+	font-size:1.3em;
+	line-height:32px;
+	font-weight:400;
+	margin:0px;
+
 }
 .aboutus .container{
 	padding-top:80px ;
 	padding-bottom:47px ;
 }
-.aboutus img {
-	padding:7px;
-	display:block;
-	border:1px solid #bab4bb;
-}
-.aboutus .heading p{
-	padding-bottom:41px;
+
+.skill{
+	font-family: sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    padding-bottom: 30px;
+    margin: 0px;
+    text-align: center;
 }
 .aboutus h4 {
 	font-size:16px;

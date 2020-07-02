@@ -12,7 +12,7 @@
             <img class="img-fluid rounded" src="{{post.post_pic.url}}" alt="Card image cap">
             <div>
                 <p style="font-size: .8em;">Published on: {{ post.published_date|date:"D, d M, Y"}}</p>
-                <a href="{% url 'post_detail' pk=post.pk %}"><h5 style="text-align: left;">{{ post.title }}</h5></a>
+                <a href="{% url 'post_detail' pk=post.pk %}"><h3 style="text-align: left;">{{ post.title }}</h3></a>
             </div>
         </div>
         </div>

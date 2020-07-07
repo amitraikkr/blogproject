@@ -8,12 +8,12 @@
         <h1 class='posttitle loader' style="text-transform: none;font-size: 2rem;font-family: 'Arial';font-weight: 400;line-height: 50px;">{{ post.title }}</h1>
        
         <div align="center">
-        <img class="responsive" src="{{post.post_pic.url}}" style="height: 300px;width: 500px">
+        <img class="responsive" src="{{post.post_pic.url}}" style="height: 250px;width: 400px">
         </div>
-       
+       <br>
         {% if post.published_date %}
             <div class="date postdate">
-                {{ post.published_date }}
+                
             </div>
 
         {% else %}

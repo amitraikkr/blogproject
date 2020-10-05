@@ -21,13 +21,17 @@ MEDIA_DIR = os.path.join(BASE_DIR,'blogsite/media')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ecis79dby3b7wgsh&m(z=pj087mb+31#+wnrp(nlmxb_u!e-0k'
+#SECRET_KEY = os.environ.get("SECRET_KEY")
+
+SECRET_KEY = 'foo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = int(os.environ.get("DEBUG", default=0))
+
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -124,7 +128,9 @@ LOGOUT_REDIRECT_URL = '/'
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'E:/PythonProjects/blogproject/blogsite/static'
+STATIC_ROOT = '/blogproject/blogsite/static'
+
+print(STATIC_ROOT)
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
